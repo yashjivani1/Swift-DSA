@@ -78,6 +78,6 @@ linkedList.push(data: 30)
 linkedList.push(data: 40)
 linkedList.push(data: 50)
 linkedList.printLinkedList()
-//Here we take position from 0 
+//Here we take position from 0
 linkedList.deleteNode(pos: 2)
 linkedList.printLinkedList()
