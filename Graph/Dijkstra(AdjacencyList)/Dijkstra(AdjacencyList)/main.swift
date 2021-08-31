@@ -28,8 +28,10 @@ class Graph{
     }
    
     func addEdge(src: Int, dest: Int, weight: Int){
-        let edge = Edge(src: src, dest: dest, weight: weight)
+        var edge = Edge(src: src, dest: dest, weight: weight)
         graph[src].append(edge)
+        edge = Edge(src: dest, dest: src, weight: weight)
+        graph[dest].append(edge)
     }
     
     
