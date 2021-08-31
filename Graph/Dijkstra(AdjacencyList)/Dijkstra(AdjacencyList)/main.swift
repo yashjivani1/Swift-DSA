@@ -54,12 +54,9 @@ class Graph{
         while !heap.isEmpty() {
             let minHeapNode = heap.extractMin()
             let node = minHeapNode?.vertex
-            print(node)
-            
             
             for vertex in self.graph[node!]{
                 let dest = vertex.dest
-                print("Done")
                 if heap.isInMinHeap(vertex: dest) && dist[node!] != Int.max && vertex.weight + dist[node!] < dist[dest]{
                     dist[dest] = dist[node!] + vertex.weight
                     heap.decreseKey(v: dest, dist: dist[dest])
